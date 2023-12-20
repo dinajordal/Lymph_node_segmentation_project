@@ -1,0 +1,22 @@
+#create a virtual environment using unix bash by interacting with the terminal 
+
+#Create the virtual environment
+python3 -m venv "name of environment"
+# Activate the virtual environment
+source "name of environment"/bin/activate
+
+#install jupyter notebook
+pip install jupyter
+#run/ open jupyter notebook in the defualt browser, i used google chrome
+jupyter notebook
+
+#install the required modules into the virtual environment
+
+#install the OpenCV library (cv2)
+pip install opencv-python
+
+#install openslide
+pip install openslide-python
+
+#install matplotlib
+pip install matplotlib

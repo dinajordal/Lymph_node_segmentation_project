@@ -1,0 +1,18 @@
+guiscript=true
+import com.google.gson.Gson
+def PROJECT_PATH = "path_to_output_folder"
+def qupath = getQuPath()
+def project = qupath.getProject()
+boolean prettyPrint = true
+def gson = GsonTools.getInstance(prettyPrint)
+for (img in project.getImageList()){
+    def imgName = img.getImageName()
+    imgName = imgName.substring(0, imgName.length()-4)
+    def imageData = img.readImageData()
+    def h = img.readHierarchy()
+    def pathObjects = h.getAnnotationObjects()
+    jsonPath = buildFilePath(PROJECT_PATH, imgName + '.json')
+    writer = new FileWriter(jsonPath) 
+    def json = gson.toJson(pathObjects, writer)
+    writer.close()
+    }

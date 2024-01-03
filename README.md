@@ -8,7 +8,7 @@ The machine learning architecture is based on the U-net architecture for its abi
 ## Project Steps
 Most of the project was spent preparing the dataset for training, validation, and testing. The codes labelled 1-6 were used to process the data before training the model. Hyperparameter tuning was performed, and validation data was used for predictions. Finally, the machine learning model with the best performance on the validation dataset was compared to a simple contouring algorithm (developed without machine learning applied). This simple Python algorithm is part of a bigger machine-learning pipeline that aims to look at morphological changes within lymph nodes from breast cancer patients.
 
-Counouring of lymph nodes: Each WSI was contoured, filtered and selected to obtain corresponding binary masks. 
+Contouring of lymph nodes: Each WSI was contoured, filtered and selected to obtain corresponding binary masks. 
 
 Annotation Extraction: Manual annotations were performed with QuPath software and used to create binary masks.
 
